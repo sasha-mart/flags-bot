@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="converter" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.013509">
+    <testsuite name="SashaMart\FlagsBot\FlagsTest" file="/var/www/html/tests/FlagsTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.013509">
+      <testcase name="testFlagsGetUnicode" class="SashaMart\FlagsBot\FlagsTest" classname="SashaMart.FlagsBot.FlagsTest" file="/var/www/html/tests/FlagsTest.php" line="8" assertions="3" time="0.013509">
+        <system-out>string(45) "
+1F1F7 1F1FA   ; Emoji_Flag_Sequence       ; "
+string(0) ""
+string(45) "
+1F1E6 1F1E8   ; Emoji_Flag_Sequence       ; "
+</system-out>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

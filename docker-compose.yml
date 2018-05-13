@@ -1,0 +1,29 @@
+version: "3"
+services:
+  nginx:
+    build: ./dockerization/nginx
+    ports:
+      - 8081:80
+    volumes:
+      - ./dockerization/logs:/etc/logs/nginx
+      - .:/var/www/html
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=8081
+    command: nginx -g "daemon off;"
+    networks:
+      main:
+        aliases:
+          - fpm
+
+  fpm:
+    build: ./dockerization/fpm
+    volumes:
+      - .:/var/www/html
+    networks:
+      main:
+        aliases:
+          - nginx
+
+networks:
+  main:
