@@ -8,12 +8,12 @@ class FlagsTest extends TestCase
     public function testFlagsGetUnicode()
     {
         $flag = new Flag('Russia');
-        $this->assertEquals('1F1F7 1F1FA', $flag->getUnicode());
+        $this->assertEquals('🇷🇺', $flag->getUtf8());
 
         $flag = new Flag('Россия');
-        $this->assertEquals('', $flag->getUnicode());
+        $this->assertEquals('', $flag->getUtf8());
 
         $flag = new Flag('Ascension Island');
-        $this->assertEquals('1F1E6 1F1E8', $flag->getUnicode());
+        $this->assertEquals('🇦🇨', $flag->getUtf8());
     }
 }
